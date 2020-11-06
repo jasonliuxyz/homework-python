@@ -2,6 +2,9 @@
 from collections.abc import Iterable
 
 '''
+不是指具体的数据类型，是一种通俗的叫法
+例如：list_iterator，dict_keyiterator, str_iterator
+
 可迭代对象包含:
 1、集合或序列类型，如str,list,dict,tuple,set
 2、文件对象

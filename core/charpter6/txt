@@ -1,0 +1,112 @@
+序列
+- 由多个成员组成，且成员是有序排列；访问序列的单个成员可以通过下标；访问序列的多个成员可以通过切片；
+- 字符串、列表、元组
+
+- 适用于所有序列的操作符和内建函数(BIF)
+	- 标准类型操作符
+	- 序列类型操作符
+		- 成员关系（in、not in）
+		- 连接 （+）
+		- 重复 （*）
+		- 切片 （[]、[:]、[::]）
+			- s[0] - s[1] - s[2] - s[3]
+			- s[-4] - s[-3] - s[-2] s[-1]  这里特殊s[-len(s):] 右边不能写0，但可以这样s[-4:None]
+		- 步长切片
+			- s[::-1] 反转
+	
+	- 内建函数
+		- 类型转换
+			- str(obj)
+			- list(ite)
+			- tuple(ite)
+			- 浅拷贝和深拷贝
+		- 可操作
+			- enumerate(ite)
+			- len(seq)
+			- max(iter, key=None)
+			- min(iter, key=None)
+			- reversed(seq)
+			- sorted(iter)
+			- sum(seq, init=0)
+			- zip([])
+
+- 字符串
+	- 简介
+		- python中字符串是'或"括起来的，两者无区别；
+		- python中字符串是不可变类型，改变一个字符串的元素需要新建一个新的字符串
+		- Python中字符串由独立的字符组成，可以通过切片操作顺序地访问
+		- Python实际上有三类字符串：str、unicode、抽象类basestring
+
+		- 字符串创建
+		- 字符串访问
+		- 字符串修改
+		- 字符串删除
+	- 操作符
+		- 标准类型操作符
+			- < =
+		- 序列类型操作符
+			- 切片
+			- in、not in 成员关系
+			- +连接
+				- join的连接：','.join(s)
+				- 格式化输出：'%s,%s' % (s, s)
+			- *重复
+		- 只适用于字符串的操作符
+			- 格式化输出
+			- 所有的Python对象都有一个字符串表示形式（通过repr()函数，或str()函数来展现）
+			- 字符串模板str.Template
+			- 原始字符,所有的字符都是直接按照字面的意思来使用，例如 r'\n'
+			- unicode字符串操作符
+	- 内建函数
+		- 标准类型函数
+			- cmp()
+		- 序列类型函数
+			- len()
+			- min()、max()
+			- emumerate()
+			- zip()
+				- list(zip('123', 'abc')) --> [('1', 'a'), ('2', 'b'), ('3', 'c')]
+		- 字符串类型函数
+			- raw_input()
+			- str() 
+		- 字符串内建函数
+			- 研读help(str)的返回
+			- capitalize(self, /) 返回首字母大写的字符串
+			- center(self, width, fillchar=' ', /) 返回一个原字符串居中,并使用空格填充至长度 width 的新字符串
+			- S.count(str, start=0, end=len(S)) 返回在S中str出现的次数
+			- encode(self, /, encoding='utf-8', errors='strict') 对字符编码
+			- endswith(str, start=0, end=len(S)) 检查字符串是否以str结束
+			- find(str, start=0, end=len(S)) 检测 str 是否包含在string中
+			- S.format(*args, **kwargs) 字符串格式化
+			- index(str, start=0, end=len(S)) 检测 str 是否包含在string中
+			- isalnum 是否都是字母或数字
+			- isalpha 是否都是字母
+			- isdigit 是否都是数字
+			- islower 是否都小写字母
+			- isnumeric 是否都是数字
+			- isspace 是否是空格
+			- istitle 是否首字母是大写
+			- isupper 是否都是大写
+			- string.join(self, iterable, /) 以 string 作为分隔符，将 seq 中所有的元素(的字符串表示)合并为一个新的字符串
+			- lower() 返回小写
+			- replace(old, new, count=-1) 把 string 中的 str1 替换成 str2,如果 num 指定，则替换不超过 num 次 
+			- split(sep=None, maxsplit=-1)  以 str 为分隔符切片string，如果 num有指定值，则仅分隔 num 个子字符串
+			- startswith(str, start=0, end=len(S)) 检查字符串是否以str开头,str也可以是字符串tuple
+			- strip() 删除 string 字符串两边的空格
+			- title() 返回每个单词的首字母都大写的字符
+			- upper() 转换 string 中的小写字母为大写
+			- zfill() 返回长度为 width 的字符串，原字符串 string 右对齐，前面填充0
+	- 字符串的独特特性
+		- 特殊字符串和控制字符
+			- \n \t
+		- 三引号 
+		- 字符串不变特性
+		- 字符串编码问题
+		
+	- 特性
+
+	- 相关模块
+		- re模块
+			- re.split(pattern, string, maxsplit=0, flags=0) 用 pattern 分开 string，如果在 pattern 中捕获到括号，那么所有的组里的文字也会包含在列表里
+				
+						
